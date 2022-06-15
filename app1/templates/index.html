@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <input type="text" name="main-url">
+        <button>Shorten</button><br><br>
+        <a href="{{ shorten_url }}" target="_blank">http://127.0.0.1:8000/{{ shorten_url }}</a>    
+    </form>
+</div>
+{% endblock %}
